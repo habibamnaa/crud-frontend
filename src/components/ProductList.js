@@ -16,14 +16,14 @@ const ProductList = () => {
     },[]);
 
     const getProducts = async() => {
-        const response = await axios.get("https://crud-backend-beta.vercel.app/products");
+        const response = await axios.get("https://crud-backend-one.vercel.app/products");
         setProducts(response.data);
     }
 
     async function onDeleteProduct() {
         setIsShowModalDeleteConfirmation(false)
         try {
-            await axios.delete(`https://crud-backend-beta.vercel.app/products/${selectedProductId}`);
+            await axios.delete(`https://crud-backend-one.vercel.app/products/${selectedProductId}`);
             getProducts();
         } catch (error) {
             console.log(error);

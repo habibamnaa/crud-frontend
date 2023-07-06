@@ -26,7 +26,7 @@ const AddProduct = ({onClose}) => {
     formData.append("buy_price", Number(buy_price));
     formData.append("sell_price", Number(sell_price));
     try {
-        await axios.post("https://crud-backend-beta.vercel.app/products/", formData, {
+        await axios.post("https://crud-backend-one.vercel.app/products", formData, {
             headers:{
                 "Content-type":"multipart/form-data"
             }

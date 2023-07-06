@@ -17,7 +17,7 @@ useEffect(()=>{
 },[]);
 
   const getProductById = async() =>{
-    const response = await axios.get(`https://crud-backend-beta.vercel.app/products/${id}`);
+    const response = await axios.get(`https://crud-backend-one.vercel.app/products/${id}`);
     setTitle(response.data.name);
     setFile(response.data.image);
     setPreview(response.data.url);
@@ -41,7 +41,7 @@ useEffect(()=>{
     formData.append("buy_price", Number(buy_price));
     formData.append("sell_price", Number(sell_price));
     try {
-        await axios.patch(`https://crud-backend-beta.vercel.app/products/${id}`, formData);
+        await axios.patch(`https://crud-backend-one.vercel.app/products/${id}`, formData);
         navigate("/")
     } catch (error) {
         console.log(error);
